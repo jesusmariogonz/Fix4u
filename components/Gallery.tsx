@@ -7,9 +7,9 @@ export default function Gallery() {
   const { t } = useLanguage();
 
   return (
-    <section id="proyectos" className="py-20 bg-white">
+    <section id="proyectos" className="py-24 md:py-32 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-dark">{t.gallery.title}</h2>
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-dark">{t.gallery.title}</h2>
         <p className="mt-4 max-w-2xl text-lg text-dark/70">{t.gallery.subtitle}</p>
         {/* Real project photos supplied by the client, selected for variety
             (epoxy/polished floors, warehouse work, metal fabrication). */}

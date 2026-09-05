@@ -99,9 +99,9 @@ export default function ContactForm() {
     "w-full min-h-[44px] rounded-md border border-dark/20 px-4 py-2 text-dark focus:outline-none focus:ring-2 focus:ring-primary";
 
   return (
-    <section id="contacto" className="py-20 bg-dark/[0.02]">
+    <section id="contacto" className="py-24 md:py-32 bg-dark/[0.02]">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-dark">{t.contact.title}</h2>
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-dark">{t.contact.title}</h2>
         <p className="mt-4 text-lg text-dark/70">{t.contact.subtitle}</p>
 
         <form onSubmit={handleSubmit} noValidate className="mt-8 space-y-5" aria-label={t.contact.title}>

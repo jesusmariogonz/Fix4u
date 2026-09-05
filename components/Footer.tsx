@@ -10,7 +10,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-dark text-white/80 py-14">
+    <footer className="bg-dark text-white/80 py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
           <div className="flex items-center gap-2">

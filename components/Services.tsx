@@ -8,9 +8,9 @@ export default function Services() {
   const { t } = useLanguage();
 
   return (
-    <section id="servicios" className="py-20 bg-dark/[0.02]">
+    <section id="servicios" className="py-24 md:py-32 bg-dark/[0.02]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-dark">{t.services.title}</h2>
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-dark">{t.services.title}</h2>
         <p className="mt-4 max-w-2xl text-lg text-dark/70">{t.services.subtitle}</p>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

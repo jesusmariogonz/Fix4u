@@ -30,7 +30,8 @@ export interface Translation {
     cta: string;
   };
   hero: {
-    headline: string;
+    headlineLine1: string;
+    headlineLine2: string;
     subtitle: string;
     ctaWhatsapp: string;
     ctaServices: string;
@@ -113,9 +114,10 @@ export const translations: Record<Locale, Translation> = {
       cta: "Cotizar por WhatsApp",
     },
     hero: {
-      headline: "Tu Solución en Instalaciones y Mantenimiento",
+      headlineLine1: "Instalación y mantenimiento,",
+      headlineLine2: "hechos bien.",
       subtitle:
-        "Tu socio confiable en soluciones integrales para la industria. Residencial, oficinas e industrial en un solo lugar.",
+        "Residencial, oficinas e industrial. Un solo equipo confiable.",
       ctaWhatsapp: "Cotizar por WhatsApp",
       ctaServices: "Ver servicios",
       imageAlt: "Equipo de Fix4U realizando trabajos de instalación industrial",
@@ -298,9 +300,10 @@ export const translations: Record<Locale, Translation> = {
       cta: "Get a Quote on WhatsApp",
     },
     hero: {
-      headline: "Your Solution for Installation and Maintenance",
+      headlineLine1: "Installation and maintenance,",
+      headlineLine2: "done right.",
       subtitle:
-        "Your trusted partner for complete industrial solutions. Residential, office, and industrial services in one place.",
+        "Residential, office, and industrial. One trusted team.",
       ctaWhatsapp: "Get a Quote on WhatsApp",
       ctaServices: "View Services",
       imageAlt: "Fix4U team performing industrial installation work",
