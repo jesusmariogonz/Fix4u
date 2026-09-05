@@ -1,6 +1,8 @@
 "use client";
 
 import { useLanguage } from "@/lib/language-context";
+import { CONTACT_EMAIL } from "@/lib/translations";
+import { trackEvent } from "@/lib/analytics";
 import { aboutIcons } from "./icons";
 
 export default function About() {
@@ -26,6 +28,17 @@ export default function About() {
             );
           })}
         </div>
+
+        <p className="mt-10 text-dark/70">
+          {t.footer.emailLabel}:{" "}
+          <a
+            href={`mailto:${CONTACT_EMAIL}`}
+            onClick={() => trackEvent("email_click", { location: "about" })}
+            className="font-semibold text-primary hover:underline"
+          >
+            {CONTACT_EMAIL}
+          </a>
+        </p>
       </div>
     </section>
   );

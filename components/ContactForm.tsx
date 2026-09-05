@@ -22,8 +22,10 @@ const initialState: FormState = {
 };
 
 // Stub for a future parallel email notification (e.g. via Resend or
-// Web3Forms). Currently a no-op — wire it up alongside the WhatsApp
-// redirect below once an email API key is available (see .env.local.example).
+// Web3Forms) that would deliver form submissions to the client's real
+// inbox, ombmyo@gmail.com. Currently a no-op — wire it up alongside the
+// WhatsApp redirect below once an email-sending API key is available (see
+// .env.local.example).
 async function sendEmailNotification(_data: FormState): Promise<void> {
   // no-op for now
   return Promise.resolve();

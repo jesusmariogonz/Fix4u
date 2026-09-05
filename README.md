@@ -57,11 +57,18 @@ URLs, which this site doesn't have.
 
 ## Images
 
-No real project photography was available for this build. Every image slot
-(hero background, gallery tiles) uses a generated gradient SVG placeholder
-from `lib/placeholder.ts`, rendered through `next/image`. Every usage site is
-commented `REPLACE WITH REAL PHOTO(S)` — search for that string to find every
-spot to swap in real photos once the client supplies them.
+The real Fix4U logo lives at `public/images/brand/fix4u-logo.png` and is used
+in the Header and Footer via `next/image`. Real project photography from the
+client lives under `public/images/gallery/` and is used for the Gallery grid
+and the Hero background. The generated gradient SVG placeholder helper in
+`lib/placeholder.ts` was removed once its only usages (hero + gallery) were
+replaced with real images — if a future section needs a stand-in image again,
+a similar helper can be re-added.
+
+The current favicon/OG image are still the framework defaults. The client's
+real logo at `public/images/brand/fix4u-logo.png` is a good source for a
+proper favicon set (e.g. via `app/icon.png` / `app/apple-icon.png`) and for
+an Open Graph image — that hasn't been wired up yet.
 
 ## Contact form → WhatsApp
 
@@ -70,13 +77,18 @@ fields client-side, builds a formatted message from them, and opens
 `https://wa.me/528444448342?text=<encoded message>` in a new tab. No
 email/SMTP backend is required for this to work.
 
-A `sendEmailNotification()` stub sits right next to the WhatsApp redirect,
-currently a no-op. To add a parallel email notification later (e.g. via
-[Resend](https://resend.com) or [Web3Forms](https://web3forms.com)):
+The client's real email is `ombmyo@gmail.com` — it's shown as a `mailto:`
+link in the Footer and "Quiénes somos" sections, and included in the
+`email` field of the JSON-LD structured data. It is **not** used to send
+mail yet: a `sendEmailNotification()` stub sits right next to the WhatsApp
+redirect, currently a no-op. To add a parallel email notification later
+(e.g. via [Resend](https://resend.com) or [Web3Forms](https://web3forms.com))
+targeting that address:
 
 1. Add the relevant API key to `.env.local` / Vercel env vars (see the
    commented-out lines in `.env.local.example`).
-2. Implement the API call inside `sendEmailNotification()`.
+2. Implement the API call inside `sendEmailNotification()`, sending to
+   `ombmyo@gmail.com` (exported as `CONTACT_EMAIL` from `lib/translations.ts`).
 3. That's it — the submit handler already calls it alongside the WhatsApp
    redirect.
 

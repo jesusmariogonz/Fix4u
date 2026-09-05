@@ -3,13 +3,12 @@
 import Image from "next/image";
 import { useLanguage } from "@/lib/language-context";
 import { WHATSAPP_NUMBER } from "@/lib/translations";
-import { placeholderDataUrl } from "@/lib/placeholder";
 import { trackEvent } from "@/lib/analytics";
 
-// REPLACE WITH REAL PHOTO: swap this data-URI gradient for a real hero
-// photograph (e.g. /images/hero.jpg) once the client provides one. Keep
-// `priority` on the <Image> so LCP stays fast.
-const heroPlaceholder = placeholderDataUrl(1600, 900, 0);
+// Real client-supplied warehouse/steel-coil facility photo, wide enough to
+// hold up as a hero background. Keep `priority` on the <Image> so LCP stays
+// fast.
+const heroImage = "/images/gallery/project-img-017.jpg";
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -17,7 +16,7 @@ export default function Hero() {
   return (
     <section id="inicio" className="relative flex items-center min-h-[92vh] pt-16 overflow-hidden bg-dark">
       <Image
-        src={heroPlaceholder}
+        src={heroImage}
         alt={t.hero.imageAlt}
         fill
         priority

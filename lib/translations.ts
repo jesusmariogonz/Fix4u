@@ -50,7 +50,7 @@ export interface Translation {
     title: string;
     subtitle: string;
     note: string;
-    items: { alt: string }[];
+    items: { alt: string; src: string }[];
   };
   contact: {
     title: string;
@@ -77,6 +77,7 @@ export interface Translation {
     followUs: string;
     privacy: string;
     rights: string;
+    emailLabel: string;
   };
   whatsappFloat: {
     label: string;
@@ -237,14 +238,17 @@ export const translations: Record<Locale, Translation> = {
     gallery: {
       title: "Proyectos realizados",
       subtitle: "Una muestra de nuestro trabajo en pisos, naves industriales y estructuras metálicas.",
-      note: "Las imágenes son ilustrativas. El cliente puede sustituirlas por fotografías reales de proyectos.",
+      note: "Fotografías reales de proyectos ejecutados por Fix4U.",
       items: [
-        { alt: "Piso epóxico industrial terminado" },
-        { alt: "Nave industrial con estructura metálica" },
-        { alt: "Instalación de mini split residencial" },
-        { alt: "Panel eléctrico industrial instalado" },
-        { alt: "Cámaras de seguridad instaladas en oficina" },
-        { alt: "Paneles solares instalados en techo" },
+        { alt: "Piso epóxico industrial en color azul en planta de manufactura", src: "/images/gallery/project-img-010.jpg" },
+        { alt: "Piso epóxico industrial blanco con líneas de señalización en amarillo", src: "/images/gallery/project-img-012.jpg" },
+        { alt: "Piso epóxico industrial en tono gris claro en área de almacenamiento", src: "/images/gallery/project-img-013.jpg" },
+        { alt: "Piso epóxico decorativo negro con vetas en cochera residencial", src: "/images/gallery/project-img-016.jpg" },
+        { alt: "Piso de concreto pulido en nave industrial con trabajadores en faena", src: "/images/gallery/project-img-018.jpg" },
+        { alt: "Estructura metálica sobre ruedas fabricada a medida en planta industrial", src: "/images/gallery/project-img-021.jpg" },
+        { alt: "Mesas y estructuras metálicas industriales fabricadas a medida en línea de producción", src: "/images/gallery/project-img-024.jpg" },
+        { alt: "Escalera y plataforma metálica industrial pintada en amarillo de seguridad", src: "/images/gallery/project-img-025.jpg" },
+        { alt: "Estructura metálica de acceso junto a maquinaria industrial pintada en amarillo", src: "/images/gallery/project-img-026.jpg" },
       ],
     },
     contact: {
@@ -273,6 +277,7 @@ export const translations: Record<Locale, Translation> = {
       privacy:
         "Aviso de privacidad: los datos proporcionados en este sitio se utilizan únicamente para responder tu solicitud de cotización y no se comparten con terceros.",
       rights: "Todos los derechos reservados.",
+      emailLabel: "Correo electrónico",
     },
     whatsappFloat: {
       label: "Chatea con nosotros por WhatsApp",
@@ -418,14 +423,17 @@ export const translations: Record<Locale, Translation> = {
     gallery: {
       title: "Completed Projects",
       subtitle: "A sample of our work in flooring, industrial buildings, and metal structures.",
-      note: "Images are illustrative placeholders. The client can replace them with real project photos.",
+      note: "Real photographs of projects completed by Fix4U.",
       items: [
-        { alt: "Finished industrial epoxy floor" },
-        { alt: "Industrial building with metal structure" },
-        { alt: "Residential mini split installation" },
-        { alt: "Installed industrial electrical panel" },
-        { alt: "Security cameras installed in an office" },
-        { alt: "Solar panels installed on a rooftop" },
+        { alt: "Blue industrial epoxy floor coating in a manufacturing plant", src: "/images/gallery/project-img-010.jpg" },
+        { alt: "White industrial epoxy floor with yellow safety line markings", src: "/images/gallery/project-img-012.jpg" },
+        { alt: "Light gray industrial epoxy floor in a storage area", src: "/images/gallery/project-img-013.jpg" },
+        { alt: "Black decorative flake epoxy floor in a residential garage", src: "/images/gallery/project-img-016.jpg" },
+        { alt: "Polished concrete floor in an industrial warehouse with workers finishing the job", src: "/images/gallery/project-img-018.jpg" },
+        { alt: "Custom-built rolling metal fabrication rack in an industrial plant", src: "/images/gallery/project-img-021.jpg" },
+        { alt: "Custom industrial metal tables and structures on a production line", src: "/images/gallery/project-img-024.jpg" },
+        { alt: "Industrial metal staircase and platform painted safety yellow", src: "/images/gallery/project-img-025.jpg" },
+        { alt: "Metal access structure next to industrial machinery painted safety yellow", src: "/images/gallery/project-img-026.jpg" },
       ],
     },
     contact: {
@@ -454,6 +462,7 @@ export const translations: Record<Locale, Translation> = {
       privacy:
         "Privacy notice: information submitted on this site is used solely to respond to your quote request and is not shared with third parties.",
       rights: "All rights reserved.",
+      emailLabel: "Email",
     },
     whatsappFloat: {
       label: "Chat with us on WhatsApp",
@@ -462,4 +471,5 @@ export const translations: Record<Locale, Translation> = {
 };
 
 export const WHATSAPP_NUMBER = "528444448342";
+export const CONTACT_EMAIL = "ombmyo@gmail.com";
 export const serviceOrder = serviceKeys;

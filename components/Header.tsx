@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/lib/language-context";
 import { WHATSAPP_NUMBER } from "@/lib/translations";
@@ -20,9 +21,19 @@ export default function Header() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-dark/95 backdrop-blur supports-[backdrop-filter]:bg-dark/80 border-b border-white/10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        <Link href="#inicio" className="flex items-baseline gap-0.5 shrink-0">
-          <span className="text-2xl font-extrabold text-white">Fix</span>
-          <span className="text-2xl font-extrabold text-gold">4U</span>
+        <Link href="#inicio" className="flex items-center gap-2 shrink-0">
+          <Image
+            src="/images/brand/fix4u-logo.png"
+            alt="Fix4U"
+            width={44}
+            height={44}
+            priority
+            className="h-11 w-11 rounded-full"
+          />
+          <span className="hidden sm:flex items-baseline gap-0.5">
+            <span className="text-xl font-extrabold text-white">Fix</span>
+            <span className="text-xl font-extrabold text-gold">4U</span>
+          </span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-6">

@@ -1,7 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { useLanguage } from "@/lib/language-context";
-import { WHATSAPP_NUMBER } from "@/lib/translations";
+import { CONTACT_EMAIL, WHATSAPP_NUMBER } from "@/lib/translations";
 import { trackEvent } from "@/lib/analytics";
 
 export default function Footer() {
@@ -12,9 +13,18 @@ export default function Footer() {
     <footer className="bg-dark text-white/80 py-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
-          <div className="flex items-baseline gap-0.5">
-            <span className="text-2xl font-extrabold text-white">Fix</span>
-            <span className="text-2xl font-extrabold text-gold">4U</span>
+          <div className="flex items-center gap-2">
+            <Image
+              src="/images/brand/fix4u-logo.png"
+              alt="Fix4U"
+              width={40}
+              height={40}
+              className="h-10 w-10 rounded-full"
+            />
+            <span className="flex items-baseline gap-0.5">
+              <span className="text-2xl font-extrabold text-white">Fix</span>
+              <span className="text-2xl font-extrabold text-gold">4U</span>
+            </span>
           </div>
           <p className="mt-3 text-sm max-w-xs">{t.footer.tagline}</p>
         </div>
@@ -27,10 +37,20 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackEvent("phone_click", { location: "footer" })}
-            className="text-sm text-gold hover:underline"
+            className="block text-sm text-gold hover:underline"
           >
             +52 844 444 8342 (WhatsApp)
           </a>
+          <p className="text-sm mt-1">
+            <span className="sr-only">{t.footer.emailLabel}: </span>
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              onClick={() => trackEvent("email_click", { location: "footer" })}
+              className="text-gold hover:underline"
+            >
+              {CONTACT_EMAIL}
+            </a>
+          </p>
           <p className="text-sm mt-2">México</p>
         </div>
 

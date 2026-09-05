@@ -1,4 +1,4 @@
-import { translations, WHATSAPP_NUMBER } from "@/lib/translations";
+import { CONTACT_EMAIL, translations, WHATSAPP_NUMBER } from "@/lib/translations";
 
 // schema.org HomeAndConstructionBusiness JSON-LD.
 // NOTE: address is a placeholder — the client must replace `streetAddress`,
@@ -14,6 +14,7 @@ export default function StructuredData() {
     description: translations.es.meta.description,
     url: siteUrl,
     telephone: `+${WHATSAPP_NUMBER}`,
+    email: CONTACT_EMAIL,
     areaServed: "MX",
     address: {
       "@type": "PostalAddress",
